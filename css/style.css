@@ -7,13 +7,24 @@ body{
 	margin:0;
 }
 
+header{
+	color: #509da5;
+	text-align: right;
+	padding-right: 200px;
+}
+
 button{
 	background-color: #509da5;
 	border: none;
 	color:#ffffff;
-	width: 200px;
-	height: 50px;
-	font-size: 20px;
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 2px;
+}
+
+button:hover{
+	background-color: #8fd8e0;
 }
 
 .container{
@@ -38,12 +49,6 @@ button{
 	padding-right: 25px;
 }
 
-#main-header{
-	margin-right: 50px;
-	text-align: right;
-	color: #509da5;
-}
-
 #user-grades{
 	float: left;
 	width: 20%;
@@ -59,4 +64,9 @@ button{
 
 #positive-misc-option{
 	padding-right: 50px;
+}
+
+#navigation-buttons{
+	clear: both;
+	float: right;
 }

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header id="main-header"><h1>Echo Grader</h1></header>
+	<header><h2>Echo Grader</h2></header>
 	<div class="container">
 		<section class="video-player">
 			<div>
@@ -13,12 +13,8 @@
 					<source src="Videos/001-001-PLX.mp4" type="">
 				</video>
 			</div>		
-			<div id="navigation-buttons">
-				<button type="button">Next</button>
-				<button type="button">Previous</button>			
-			</div>
 		</section>
-
+		<!-- Metrics for the user to input -->
 		<section id="user-grades">
 			<form>
 				<h3>FOCUS View</h3>
@@ -113,8 +109,14 @@
 			<label id='positive-misc-option'>Good</label>
 			
 			<input type="radio" name="wall-mtn-bad">
-			<label>Bad</label><br>
+			<label>Bad</label><br>			
 		</section>
+			<!-- Video player buttons -->
+			<div id="navigation-buttons">
+				<button type="button">Save</button>			
+				<button type="button">Previous</button>			
+				<button type="button">Next</button>
+			</div>
 	</div>
 </body>
 </html>
