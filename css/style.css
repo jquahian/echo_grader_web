@@ -1,0 +1,62 @@
+body{
+	background-color:#000000;
+	color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+	margin:0;
+}
+
+button{
+	background-color: #509da5;
+	border: none;
+	color:#ffffff;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.container{
+	width:90%;
+	margin:auto;
+	text-align: left;
+	margin-top: 50px;
+	margin-left: 5px;
+}
+
+.container h3{
+	color: #509da5;
+}
+
+.video-player{
+	float: left;
+	width: 60%;
+}
+
+
+.misc-ratings-radiobtn{
+	padding-right: 25px;
+}
+
+#main-header{
+	margin-right: 50px;
+	text-align: right;
+	color: #509da5;
+}
+
+#user-grades{
+	float: left;
+	width: 20%;
+}
+
+#image-quality-header{
+}
+
+#misc-ratings{
+	float: left;
+	width: 20%;
+}
+
+#positive-misc-option{
+	padding-right: 50px;
+}

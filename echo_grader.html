@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="main-header"><h1>Echo Grader</h1></header>
+	<div class="container">
+		<section class="video-player">
+			<div>
+				<video width="800" height="592" autoplay controls loop>
+					<source src="Videos/001-001-PLX.mp4" type="">
+				</video>
+			</div>		
+			<div id="navigation-buttons">
+				<button type="button">Next</button>
+				<button type="button">Previous</button>			
+			</div>
+		</section>
+
+		<section id="user-grades">
+			<form>
+				<h3>FOCUS View</h3>
+				<input type="radio" name="4C">
+				<label>Apical Four Chamber</label><br>
+				
+				<input type="radio" name="5C">
+				<label>Apical Five Chamber</label><br>
+
+				<input type="radio" name="PLX">
+				<label>Parasternal Long Axis</label><br>
+
+				<input type="radio" name="AVSX">
+				<label>Aortic Valve Short Axis</label><br>
+
+				<input type="radio" name="SXB">
+				<label>Basal Short Axis</label><br>
+
+				<input type="radio" name="SXA">
+				<label>Apical Short Axis</label><br>
+
+				<input type="radio" name="RIVC">
+				<label>Right Ventricular Inflow Outflow</label><br>
+
+				<input type="radio" name="SC">
+				<label>Subcostal Four Chamber</label><br>
+
+				<input type="radio" name="lung">
+				<label>Lung</label><br>
+
+				<input type="radio" name="other">
+				<label>Unknown</label><br><br>
+
+				<h3 id="image-quality-header">Image Quality</h3>
+				<input type="radio" name="unrecognizable">
+				<label>Unrecognizable</label><br>
+
+				<input type="radio" name="poor">
+				<label>Poor</label><br>
+
+				<input type="radio" name="good">
+				<label>Good</label><br>
+
+				<input type="radio" name="excellent">
+				<label>Excellent</label><br>
+			</form>
+		</section>
+		<section id="misc-ratings">
+			<h3>Wall Motion Abnormality</h3>
+
+			<input type="radio" name="wall-mtn-present">
+			<label id='positive-misc-option'>Present</label>
+			
+			<input type="radio" name="wall-mtn-absent">
+			<label>Absent</label><br>
+
+			<h3>Orientation</h3>
+
+			<input type="radio" name="orientation-correct">
+			<label id='positive-misc-option'>Correct</label>
+			
+			<input type="radio" name="orientation-incorrect">
+			<label>Incorrect</label><br>
+
+			<h3>ECG</h3>
+
+			<input type="radio" name="ecg-present">
+			<label id='positive-misc-option'>Present</label>
+			
+			<input type="radio" name="ecg-absent">
+			<label>Absent</label><br>
+
+			<h3>Color Doppler</h3>
+
+			<input type="radio" name="color-doppler-present">
+			<label id='positive-misc-option'>Present</label>
+			
+			<input type="radio" name="color-doppler-absent">
+			<label>Absent</label><br>
+
+			<h3>Appropriate Depth</h3>
+
+			<input type="radio" name="depth-present">
+			<label id='positive-misc-option'>Yes</label>
+			
+			<input type="radio" name="depth-absent">
+			<label>No</label><br>
+
+			<h3>Focus Level</h3>
+
+			<input type="radio" name="focus-level-good">
+			<label id='positive-misc-option'>Good</label>
+			
+			<input type="radio" name="wall-mtn-bad">
+			<label>Bad</label><br>
+		</section>
+	</div>
+</body>
+</html>
