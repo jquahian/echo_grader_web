@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<script src="test.js" type="text/javascript"></script>
 </head>
 <body>
@@ -11,7 +11,7 @@
 		<section class="video-player">
 			<div>
 				<video width="800" height="592" autoplay muted controls loop>
-					<source src="Videos/001-001-PLX.mp4" type="">
+					<source src="{{ url_for('static', filename='001-003-4C.mp4')}}" type="">
 				</video>
 			</div>		
 		</section>
