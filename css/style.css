@@ -24,7 +24,10 @@ button{
 }
 
 button:hover{
-	background-color: #8fd8e0;
+	background-color: #000;
+	cursor: pointer;
+	opacity: 0.6;
+	transition: 0.25s;
 }
 
 .container{
@@ -44,17 +47,9 @@ button:hover{
 	width: 60%;
 }
 
-
-.misc-ratings-radiobtn{
-	padding-right: 25px;
-}
-
 #user-grades{
 	float: left;
 	width: 20%;
-}
-
-#image-quality-header{
 }
 
 #misc-ratings{
@@ -69,4 +64,37 @@ button:hover{
 #navigation-buttons{
 	clear: both;
 	float: right;
+}
+
+#bg-vid{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+}
+
+#login-content{
+	position:fixed;
+	bottom: 50%;
+	width: 100%;
+	padding: 20px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+
+#login-content label{
+	display: inline-block;
+	width: 80px;
+	text-align: left;
+}
+
+#login-content input{
+	display: inline-block;
+}
+
+#login-content button{
+	width: 250px;
+	margin-top: 25px;
 }
