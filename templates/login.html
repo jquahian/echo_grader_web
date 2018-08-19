@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<video id="bg-vid" autoplay loop muted>
-		<source src="{{ url_for('static', filename='001-001-PLX.mp4') }}" type="video/mp4">
+		<source src="Videos/001-003-4C.mp4" type="video/mp4">
 		Your browser does not support HTML5 video
 	</video>
 
 	<div id=login-content>
 		<h2 id=login-header>APIL Echo Grader</h2>
-		<form action="{{ url_for('grader')}}">
-
+		<form action="echo_grader.html">
+			<label>Username</label>
+			<input type="text" name="username_input"><br>
+			<label>Password</label>
+			<input type="text" name="password_input"><br>
+			<button type="submit">Submit</button>
 		</form>
 	</div>
 </body>
