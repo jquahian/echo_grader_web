@@ -83,3 +83,18 @@ button:hover{
 	background: rgba(0, 0, 0, 0.6);
 	text-align: center;
 }
+
+#login-content label{
+	display: inline-block;
+	width: 80px;
+	text-align: left;
+}
+
+#login-content input{
+	display: inline-block;
+}
+
+#login-content button{
+	width: 250px;
+	margin-top: 25px;
+}
