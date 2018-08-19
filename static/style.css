@@ -10,7 +10,7 @@ body{
 header{
 	color: #509da5;
 	text-align: right;
-	padding-right: 200px;
+	padding-right: 80px;
 }
 
 button{
@@ -31,39 +31,16 @@ button:hover{
 }
 
 .container{
-	width:90%;
-	margin:auto;
-	text-align: left;
-	margin-top: 50px;
-	margin-left: 5px;
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr;
 }
 
 .container h3{
 	color: #509da5;
 }
 
-.video-player{
-	float: left;
-	width: 60%;
-}
-
-#user-grades{
-	float: left;
-	width: 20%;
-}
-
-#misc-ratings{
-	float: left;
-	width: 20%;
-}
-
 #positive-misc-option{
 	padding-right: 50px;
-}
-
-#navigation-buttons{
-	clear: both;
-	float: right;
 }
 
 #bg-vid{
@@ -97,4 +74,9 @@ button:hover{
 #login-content button{
 	width: 250px;
 	margin-top: 25px;
+}
+
+#navigation-buttons{
+	float:	right;
+	margin-right: 70px;
 }
