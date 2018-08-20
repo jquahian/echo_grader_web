@@ -46,21 +46,44 @@
 				<input type="radio" name="lung" id="view9">
 				<label  for="view9">Lung</label><br>
 
-				<input type="radio" name="other" id="view10">
-				<label  for="view10">Unknown</label><br><br>
+				<input type="radio" name="Unknown" id="view10">
+				<label  for="view10">Unknown</label><br>
 
-				<h3 id="image-quality-header">Image Quality</h3>
+				<label for="view11">Other: </label>
+				<input type="text" name="Other" id="view11">
+
+				<h3 id="image-quality-header">Image Optimization</h3>
 				<input type="radio" name="unrecognizable" id=quality1>
-				<label for="quality1">Unrecognizable</label><br>
+				<label for="quality1">Most key structures not visible</label><br>
 
 				<input type="radio" name="poor" id=quality2>
-				<label for="quality2">Poor</label><br>
+				<label for="quality2">Some key structures visible</label><br>
 
 				<input type="radio" name="good" id=quality3>
-				<label for="quality3">Good</label><br>
+				<label for="quality3">Most key structures visible</label><br>
 
 				<input type="radio" name="excellent" id=quality4>
-				<label for="quality4">Excellent</label><br>
+				<label for="quality4">All key structures visible</label><br>
+
+				<h3>Pathology</h3>
+				<input type="checkbox" id="normal" name="normal" value="normal">
+				<label for="normal">Normal</label><br>
+
+				<input type="checkbox" id="lv-dysfunc" name="lv-dysfunc" value="lv-dysfunc">
+				<label for="lv-dysfunc">LV Dysfunction</label><br>
+
+				<input type="checkbox" id="rv-dysfunc" name="rv-dysfunc" value="rv-dysfunc">
+				<label for="rv-dysfunc">RV Dysfunction</label><br>
+
+				<input type="checkbox" id="pericardial-effusion" name="pericardial-effusion" value="pericardial-effusion">
+				<label for="pericardial-effusion">Pericardial Effusion</label><br>
+
+				<input type="checkbox" id="Mass" name="Mass" value="Mass">
+				<label for="Mass">Mass</label><br>
+
+				<label for="path-other">Other: </label>
+				<input type="text" id="path-other" name="path-other">
+
 			</form>
 		</section>
 		<section id="misc-ratings">
@@ -77,13 +100,13 @@
 			<input type="radio" name="orientation-correct" id="misc2a">
 			<label id='positive-misc-option' for="misc2a">Correct</label>
 			
-			<input type="radio" name="orientation-incorrect" id="misc2b">
-			<label for="misc2b">Incorrect</label><br>
+			<input type="radio" name="orientation-unclear" id="misc2b">
+			<label for="misc2b">Unclear</label><br>
 
 			<h3>ECG</h3>
 
 			<input type="radio" name="ecg-present" id="misc3a">
-			<label id='positive-misc-option' for="misc3a">Present</label>
+			<label id='positive-misc-option' for="misc3a">Identifiable R-spike</label>
 			
 			<input type="radio" name="ecg-absent" id="misc3b">
 			<label for="misc3b">Absent</label><br>
