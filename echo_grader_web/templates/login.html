@@ -10,7 +10,8 @@
 	</video>
 	<div id=login-content>
 		<h2 id=login-header>APIL Echo Grader</h2>
-		<form action="POST" action="">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
 			<div>
 				<!-- this looks like shit, but it's working -->
 				{{ form.username.label() }}
@@ -28,9 +29,6 @@
 			</div>
 			<div>
 				{{ form.submit() }}
-			</div>
-			<div>
-				{{ form.register() }}
 			</div>
 		</form>
 	</div>

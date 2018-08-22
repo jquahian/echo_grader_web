@@ -1,8 +1,14 @@
-from echo_grader_web import db
+from echo_grader_web import db, login_manager
+from flask_login import UserMixin
 
+
+# reloads the user by id
+@login_manager.user_loader
+def load_user(user_id):
+	return User.query.get(int(user_id))
 
 # our user will just contain a username and password
-class User(db.Model):
+class User(db.Model, UserMixin):
 	id = db.Column(db.Integer, primary_key=True)
 	# we only want to get the person's username and password to sign-up
 	username = db.Column(db.String(20), unique=True, nullable=False)
