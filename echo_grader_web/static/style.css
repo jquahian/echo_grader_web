@@ -35,7 +35,13 @@ button:hover {
 	grid-template-columns: 3fr 1fr 1fr;
 }
 
-.container h3 {
+.grader-rb {
+	text-align: left;
+	list-style: none;
+	padding-left: 0px;
+}
+
+.grader-rb-label{
 	color: #509da5;
 }
 

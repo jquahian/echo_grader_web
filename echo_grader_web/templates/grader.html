@@ -16,124 +16,103 @@
 			</div>		
 		</section>
 		<!-- Metrics for the user to input -->
-		<section id="user-grades">
-			<form>
-				<h3>FOCUS View</h3>
-				<input type="radio" name="4C" id="view1">
-				<label for="view1">Apical Four Chamber</label><br>
-				
-				<input type="radio" name="5C" id="view2">
-				<label  for="view2"` for="view">Apical Five Chamber</label><br>
-
-				<input type="radio" name="PLX" id="view3">
-				<label  for="view3">Parasternal Long Axis</label><br>
-
-				<input type="radio" name="AVSX" id="view4">
-				<label  for="view4">Aortic Valve Short Axis</label><br>
-
-				<input type="radio" name="SXB" id="view5">
-				<label  for="view5">Basal Short Axis</label><br>
-
-				<input type="radio" name="SXA" id="view6">
-				<label  for="view6">Apical Short Axis</label><br>
-
-				<input type="radio" name="RIVC" id="view7">
-				<label  for="view7">Right Ventricular Inflow Outflow</label><br>
-
-				<input type="radio" name="SC" id="view8">
-				<label  for="view8">Subcostal Four Chamber</label><br>
-
-				<input type="radio" name="lung" id="view9">
-				<label  for="view9">Lung</label><br>
-
-				<input type="radio" name="Unknown" id="view10">
-				<label  for="view10">Unknown</label><br>
-
-				<label for="view11">Other: </label>
-				<input type="text" name="Other" id="view11">
-
-				<h3 id="image-quality-header">Image Optimization</h3>
-				<input type="radio" name="unrecognizable" id=quality1>
-				<label for="quality1">Most key structures not visible</label><br>
-
-				<input type="radio" name="poor" id=quality2>
-				<label for="quality2">Some key structures visible</label><br>
-
-				<input type="radio" name="good" id=quality3>
-				<label for="quality3">Most key structures visible</label><br>
-
-				<input type="radio" name="excellent" id=quality4>
-				<label for="quality4">All key structures visible</label><br>
-
-				<h3>Pathology</h3>
-				<input type="checkbox" id="normal" name="normal" value="normal">
-				<label for="normal">Normal</label><br>
-
-				<input type="checkbox" id="lv-dysfunc" name="lv-dysfunc" value="lv-dysfunc">
-				<label for="lv-dysfunc">LV Dysfunction</label><br>
-
-				<input type="checkbox" id="rv-dysfunc" name="rv-dysfunc" value="rv-dysfunc">
-				<label for="rv-dysfunc">RV Dysfunction</label><br>
-
-				<input type="checkbox" id="pericardial-effusion" name="pericardial-effusion" value="pericardial-effusion">
-				<label for="pericardial-effusion">Pericardial Effusion</label><br>
-
-				<input type="checkbox" id="Mass" name="Mass" value="Mass">
-				<label for="Mass">Mass</label><br>
-
-				<label for="path-other">Other: </label>
-				<input type="text" id="path-other" name="path-other">
-
+		<section>
+			<form method="POST", action="">
+				<!-- FOCUS Views -->
+				<div>
+					<h3>{{ form.focus_views.label(class="grader-rb-label") }}</h3>
+					{{ form.focus_views(class="grader-rb") }}
+	 				{{ form.focus_view_other.label() }}
+					{{ form.focus_view_other }}					
+				</div>
+				<!-- Image Quality Assessment -->
+				<div>
+					<h3>{{ form.image_quality.label(class="grader-rb-label") }}</h3>
+					{{ form.image_quality(class="grader-rb") }}
+				</div>
+				<!-- Pathology -->
+				<div>
+					<h3 class="grader-rb-label">Pathology</h3>
+					{{ form.normal_pathology }} {{ form.normal_pathology.label() }}
+				<div>
+					{{ form.lv_dysfunc_pathology }} {{ form.lv_dysfunc_pathology.label() }}					
+				</div>
+				<div>
+					{{ form.rv_dysfunc_pathology }} {{ form.rv_dysfunc_pathology.label() }}
+				</div>
+				<div>
+					{{ form.effusion_pathology }} {{ form.effusion_pathology.label() }}
+				</div>
+					{{ form.mass_pathology }} {{ form.mass_pathology.label() }}
+				</div>
+				<div>
+					{{ form.other_pathology.label() }} {{ form.other_pathology }}
+				</div>
 			</form>
 		</section>
-		<section id="misc-ratings">
-			<h4>Wall Motion Abnormality</h3>
+		<section>
+			<form method="POST", action="">
+				<!-- Miscellanous Category Ratings -->
+				<div>
+					<h3>{{ form.wall_motion.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.wall_motion %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>		
+				<div>
+					<h3>{{ form.orientation.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.orientation %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>
+				<div>
+					<h3>{{ form.ecg.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.ecg %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>		
+				<div>
+					<h3>{{ form.color_doppler.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.color_doppler %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>		
+				<div>
+					<h3>{{ form.depth.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.depth %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>		
+				<div>
+					<h3>{{ form.focus_level.label(class="grader-rb-label") }}</h3>
+					{% for subfield in form.focus_level %}
+					<tr>
+						<td>{{ subfield }}</td>
+						<td>{{ subfield.label }}</td>
+					</tr>
+					{% endfor %}
+				</div>	
+			</form>	
+		</section>
+		<section>
+			<div>
 
-			<input type="radio" name="wall-mtn-present" id="misc1a">
-			<label id='positive-misc-option' for="misc1a">Present</label>
-			
-			<input type="radio" name="wall-mtn-absent" id="misc1b">
-			<label for="misc1b">Absent</label><br>
-
-			<h3>Orientation</h3>
-
-			<input type="radio" name="orientation-correct" id="misc2a">
-			<label id='positive-misc-option' for="misc2a">Correct</label>
-			
-			<input type="radio" name="orientation-unclear" id="misc2b">
-			<label for="misc2b">Unclear</label><br>
-
-			<h3>ECG</h3>
-
-			<input type="radio" name="ecg-present" id="misc3a">
-			<label id='positive-misc-option' for="misc3a">Identifiable R-spike</label>
-			
-			<input type="radio" name="ecg-absent" id="misc3b">
-			<label for="misc3b">Absent</label><br>
-
-			<h3>Color Doppler</h3>
-
-			<input type="radio" name="color-doppler-present" id="misc4a">
-			<label id='positive-misc-option' for="misc4a">Present</label>
-			
-			<input type="radio" name="color-doppler-absent" id="misc4b">
-			<label for="misc4b">Absent</label><br>
-
-			<h3>Appropriate Depth</h3>
-
-			<input type="radio" name="depth-present" id="misc5a">
-			<label id='positive-misc-option' for="misc5a">Yes</label>
-			
-			<input type="radio" name="depth-absent" id="misc5b">
-			<label for="misc5b">No</label><br>
-
-			<h3>Focus Level</h3>
-
-			<input type="radio" name="focus-level-good"  id="misc6a" onclick="forLoop();">
-			<label id='positive-misc-option' for="misc6a">Good</label>
-			
-			<input type="radio" name="wall-mtn-bad" id="misc6b">
-			<label for="misc6b">Bad</label><br>			
+			</div>
 		</section>
 	</div>
 		<!-- Video player navigation buttons -->
