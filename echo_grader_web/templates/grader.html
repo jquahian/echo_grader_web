@@ -3,27 +3,28 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-	<script src="test.js" type="text/javascript"></script>
 </head>
 <body>
 	<header><h2>Echo Grader</h2></header>
-	<div class="container">
-		<section class="video-player">
-			<div>
-				<video width="800" height="592" autoplay muted controls loop>
-					<source src="{{ url_for('static', filename='001-003-4C.mp4')}}" type="">
-				</video>
-			</div>		
-		</section>
-		<!-- Metrics for the user to input -->
-		<section>
-			<form method="POST", action="">
+	<form method="POST", action="">
+		<div class="container">
+			<section class="video-player">
+				<div>
+					<video width="800" height="592" autoplay muted controls loop>
+						<!-- this needs to be iterable -->
+						<source src="static/{{ clip }}" type="">
+					</video>
+					<p>{{ counter }}</p>
+				</div>		
+			</section>
+			<!-- Metrics for the user to input -->
+			<section>
 				<!-- FOCUS Views -->
 				<div>
 					<h3>{{ form.focus_views.label(class="grader-rb-label") }}</h3>
 					{{ form.focus_views(class="grader-rb") }}
 	 				{{ form.focus_view_other.label() }}
-					{{ form.focus_view_other }}					
+					{{ form.focus_view_other }}	
 				</div>
 				<!-- Image Quality Assessment -->
 				<div>
@@ -35,7 +36,7 @@
 					<h3 class="grader-rb-label">Pathology</h3>
 					{{ form.normal_pathology }} {{ form.normal_pathology.label() }}
 				<div>
-					{{ form.lv_dysfunc_pathology }} {{ form.lv_dysfunc_pathology.label() }}					
+					{{ form.lv_dysfunc_pathology }} {{ form.lv_dysfunc_pathology.label() }}		
 				</div>
 				<div>
 					{{ form.rv_dysfunc_pathology }} {{ form.rv_dysfunc_pathology.label() }}
@@ -48,10 +49,8 @@
 				<div>
 					{{ form.other_pathology.label() }} {{ form.other_pathology }}
 				</div>
-			</form>
-		</section>
-		<section>
-			<form method="POST", action="">
+			</section>
+			<section>
 				<!-- Miscellanous Category Ratings -->
 				<div>
 					<h3>{{ form.wall_motion.label(class="grader-rb-label") }}</h3>
@@ -106,22 +105,14 @@
 						<td>{{ subfield.label }}</td>
 					</tr>
 					{% endfor %}
+				</div>
+				<!-- Navigation Button -->
+				<div>
+					{{ form.prev_btn(class="btn") }} 
+					{{ form.next_btn(class="btn") }}
 				</div>	
-			</form>	
-		</section>
-		<section>
-			<div>
-
-			</div>
-		</section>
-	</div>
-		<!-- Video player navigation buttons -->
-		<div id="navigation-buttons">
-			<form action="{{ url_for('login') }}">
-				<button type="submit" id="home-button">Home</button>
-				<button type="button" onclick="foo('hi');">Previous</button>			
-				<button type="button" onclick="forEachLoop();">Next</button>
-			</form>
+			</section>
 		</div>
-	</body>
+	</form>	
+</body>
 </html>

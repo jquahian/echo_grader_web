@@ -15,7 +15,6 @@
 			<div>
 				<!-- this looks like shit, but it's working -->
 				{{ form.username.label() }}
-
 				{% if form.username.errors %}
 					{% for error in form.username.errors %}
 						<span>{{ error }}</span>
@@ -28,7 +27,7 @@
 				{{ form.password }}
 			</div>
 			<div>
-				{{ form.submit() }}
+				{{ form.submit(class="btn") }}
 			</div>
 		</form>
 	</div>

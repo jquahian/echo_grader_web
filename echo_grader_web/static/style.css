@@ -13,23 +13,6 @@ header {
 	padding-right: 80px;
 }
 
-button {
-	background-color: #509da5;
-	border: none;
-	color:#ffffff;
-	width: 100px;
-	height: 30px;
-	font-size: 16px;
-	border-radius: 2px;
-}
-
-button:hover {
-	background-color: #000;
-	cursor: pointer;
-	opacity: 0.6;
-	transition: 0.25s;
-}
-
 .container {
 	display: grid;
 	grid-template-columns: 3fr 1fr 1fr;
@@ -41,12 +24,19 @@ button:hover {
 	padding-left: 0px;
 }
 
-.grader-rb-label{
-	color: #509da5;
+.btn {
+	background-color: #509da5;
+	border: none;
+	color:#ffffff;
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 2px;
+	margin-top: 20px;
 }
 
-#positive-misc-option {
-	padding-right: 10px;
+.grader-rb-label{
+	color: #509da5;
 }
 
 #bg-vid {
@@ -80,9 +70,4 @@ button:hover {
 #login-content button {
 	width: 250px;
 	margin-top: 25px;
-}
-
-#navigation-buttons {
-	float: right;
-	margin-right: 20px;
 }

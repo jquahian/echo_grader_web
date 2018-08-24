@@ -24,6 +24,7 @@ class LogInForm(FlaskForm):
 	password = PasswordField("Password", validators=[DataRequired()])
 	remember = BooleanField("Remember Me")
 	submit = SubmitField("Log In")
+	# need a register field
 
 class GraderForm(FlaskForm):
 	# make our variables as wtfield classes

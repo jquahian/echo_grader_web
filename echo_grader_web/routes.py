@@ -3,6 +3,8 @@ from flask import url_for, render_template, flash, redirect
 from echo_grader_web import app, db, bcrypt
 from echo_grader_web.forms import RegistrationForm, LogInForm, GraderForm
 from echo_grader_web.models import User, Ratings
+# our logic file
+import echo_grader_web.logic as logic
 # will handle users logging in
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -15,6 +17,7 @@ def login():
 		user = User.query.filter_by(username=form.username.data).first()
 		if user and bcrypt.check_password_hash(user.password, form.password.data):
 			login_user(user, remember=form.remember.data)
+			# call functions from the logic script here
 			return redirect(url_for('grader'))
 		else:
 			flash('nope')
@@ -43,8 +46,18 @@ def register():
 @login_required
 def grader():
 	form = GraderForm()
-	return render_template("grader.html", title="Grader", form=form)
+	counter = 0
+	if form.validate_on_submit():
+		counter += 1 
+		next_clip = logic.video_list[counter]
+		return redirect(url_for('login'))
+	else:
+		counter=3
 
+	init_vid = logic.video_list[counter]
+	return render_template("grader.html", title="Grader", form=form, clip=init_vid, counter=counter)
+	# submit the form options to the database by making a new Ratings class
+		
 # need to put this into the HTML file
 @app.route("/logout")
 def logout():
